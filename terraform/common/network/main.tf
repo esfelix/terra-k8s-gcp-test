@@ -1,18 +1,5 @@
-# Copyright (c) HashiCorp, Inc.
-# SPDX-License-Identifier: MPL-2.0
 
-variable "project_id" {
-  description = "project id"
-}
 
-variable "region" {
-  description = "region"
-}
-
-provider "google" {
-  project = var.project_id
-  region  = var.region
-}
 
 # VPC
 resource "google_compute_network" "vpc" {
@@ -26,4 +13,17 @@ resource "google_compute_subnetwork" "subnet" {
   region        = var.region
   network       = google_compute_network.vpc.name
   ip_cidr_range = "10.10.0.0/24"
+}
+
+
+resource "google_compute_firewall" "allow_http_https" {
+  name    = "allow-http-https"
+  network = google_compute_network.vpc.name
+
+  allow {
+    protocol = "tcp"
+    ports    = ["80", "443"]
+  }
+
+  source_ranges = ["0.0.0.0/0"]
 }
