@@ -4,4 +4,4 @@ namespace: argo-cd
 resources:
   - ./versions/2.13.0
   - ns.yaml
-  # - certificate.yaml
+  - certificate.yaml
