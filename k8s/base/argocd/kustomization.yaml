@@ -1,2 +1,7 @@
-generators:
-  - generators-helm.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: argo-cd
+resources:
+  - ./versions/2.13.0
+  - ns.yaml
+  # - certificate.yaml
