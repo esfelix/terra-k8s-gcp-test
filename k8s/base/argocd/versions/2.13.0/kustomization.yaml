@@ -1,2 +1,2 @@
 resources:
-  - argo-cd.yaml
+  - ./vendor-manifests/argo-cd.yaml

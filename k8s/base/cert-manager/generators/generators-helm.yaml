@@ -1,0 +1,12 @@
+apiVersion: builtin
+kind: HelmChartInflationGenerator
+metadata:
+  name: cert-manager
+name: cert-manager
+namespace: cert-manager
+version: 1.17.0
+repo: https://charts.jetstack.io
+releaseName: tkgt
+includeCRDs: true
+extraArgs:
+  - "--install-crds"
