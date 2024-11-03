@@ -21,7 +21,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: git@github.com:Moments-of-Space/mos-terraform
+    repoURL: https://github.com/esfelix/terra-k8s-gcp-test.git
     targetRevision: feature/to-1.27
     path: k8s/overlays/cert-manager
   destination:
