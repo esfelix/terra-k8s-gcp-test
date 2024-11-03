@@ -22,7 +22,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/esfelix/terra-k8s-gcp-test.git
-    targetRevision: feature/to-1.27
+    targetRevision: HEAD
     path: k8s/overlays/cert-manager
   destination:
     server: https://kubernetes.default.svc
