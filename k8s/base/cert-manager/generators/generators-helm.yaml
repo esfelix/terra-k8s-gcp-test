@@ -4,7 +4,7 @@ metadata:
   name: cert-manager
 name: cert-manager
 namespace: cert-manager
-version: 1.17.0
+version: 1.16.0
 repo: https://charts.jetstack.io
 releaseName: tkgt
 includeCRDs: true
