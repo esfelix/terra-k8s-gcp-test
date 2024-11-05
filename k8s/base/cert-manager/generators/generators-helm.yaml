@@ -10,3 +10,7 @@ releaseName: tkgt
 includeCRDs: true
 extraArgs:
   - "--install-crds"
+valuesInline:
+  global:
+    leaderElection:
+      namespace: cert-manager
