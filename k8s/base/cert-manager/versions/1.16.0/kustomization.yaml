@@ -3,7 +3,7 @@ kind: Kustomization
 
 resources:
   - ./vendor-manifests/cert-manager-crds.yaml
-  - ./vendor-manifests/cert-manager
+  - ./vendor-manifests/cert-manager.yaml
 
 patches:
   - target:
